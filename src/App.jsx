@@ -1,16 +1,18 @@
-import React from 'react';
-import './styles.css';
+// import { useState } from 'react';
+// value stores the value and setValue is a function that can be used to change the value. The null passed to useState is used as the initial value for this state variable, so value here starts off equal to null.
 
-// import { useState } from "react";
+// function Square() {
+//   const [value, setValue] = useState(null);
 
 function Square({ value }) {
   function handleClick() {
     console.log("Button Clicked");
   }
   // all the function declarations and js code should be written before return , because what ever is in return statement returns the chunk of the code from the function
+  // button component ki on click (prop)property will call the function handleClick whenever Clicked 
   return (
     <button className="square" onClick={handleClick}>
-      {/* button component ki on click (prop)property will call the function handleClick whenever Clicked */}
+
       {value}
     </button>
   );
